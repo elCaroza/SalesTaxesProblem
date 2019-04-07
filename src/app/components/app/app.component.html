@@ -1,0 +1,30 @@
+<!-- Re-used Template -->
+<ng-template #protoList let-isOutput="isOutput">
+  <h2 class="main-title">{{ getTitle( isOutput ) }}</h2>
+  <ul class="main-box">
+    <li *ngFor="let elem of salesList; let i = index" class="elem-box">
+      <h3>{{ getTitle( isOutput, i ) }}</h3>
+      <ul>
+        <li *ngFor="let currentItem of elem.data">
+          {{ currentItem.quantity }} {{ currentItem.imported ? "imported" : "" }} {{ currentItem.description }} at {{ getPrice( isOutput, currentItem ) }}
+        </li>
+        <div *ngIf="isOutput" class="output-details">
+          <li>Sales Taxes : {{ elem.salesTaxes }}</li>
+          <li>Total : {{ elem.total }}</li>
+        </div>
+      </ul>
+    </li>
+  </ul>
+</ng-template>
+
+<!-- Logic Functional -->
+<div class="content-box">
+
+  <!-- INPUT container -->
+  <ng-container *ngTemplateOutlet="protoList;context:{ isOutput : false }"></ng-container>
+</div>
+<div class="content-box">
+
+  <!-- OUTPUT container -->
+  <ng-container *ngTemplateOutlet="protoList;context:{ isOutput : true }"></ng-container>
+</div>

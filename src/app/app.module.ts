@@ -1,7 +1,12 @@
+// Angular dependencies
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+// Components
+import { AppComponent } from './components/app/app.component';
+
+// Services
+import { ManageDataService } from './services/manage-data.service';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ManageDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

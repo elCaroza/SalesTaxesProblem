@@ -1,0 +1,27 @@
+{
+  "data" : {
+    "taxes" : {
+      "default" : 10,
+      "import" : 5,
+      "rounded_amount" : 0.05,
+      "excepts" : ["books", "food", "medical products"]
+    },
+    "inputs" : [
+      [
+        {"quantity": 2, "price": 12.49, "description": "book", "imported": false, "taxes": 0},
+        {"quantity": 1, "price": 14.99, "description": "music CD", "imported": false, "taxes": true},
+        {"quantity": 1, "price": 0.85, "description": "chocolate bar", "imported": false, "taxes": 1}
+      ],
+      [
+        {"quantity": 1, "price": 10.00, "description": "box of chocolates", "imported": true, "taxes": 1},
+        {"quantity": 1, "price": 47.50, "description": "bottle of perfume", "imported": true, "taxes": true}
+      ],
+      [
+        {"quantity": 1, "price": 27.99, "description": "bottle of perfume", "imported": true, "taxes": true},
+        {"quantity": 1, "price": 18.99, "description": "bottle of perfume", "imported": false, "taxes": true},
+        {"quantity": 1, "price": 9.75, "description": "packet of headache pills", "imported": false, "taxes": 2},
+        {"quantity": 3, "price": 11.25, "description": "box of chocolates", "imported": true, "taxes": 1}
+      ]
+    ]
+  }
+}
