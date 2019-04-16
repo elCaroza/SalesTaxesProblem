@@ -1,0 +1,18 @@
+<h3> Test component for entire app</h3>
+<button (click)="newRandomize()">Randomize new data</button>
+
+<!-- Current data -->
+<p>UPDATE TIME : <b>{{ updateTime }}</b></p>
+<hr />
+<p>DATA TAXES : <b>{{ taxes | json }}</b></p>
+<ul>
+  <li>"default" : is default tax addicted to all item with no 'excepts'</li>
+  <li>"import" : is an addition import duty tax addicted to all imported item</li>
+  <li>"excepts" : is an object contains all item without 'default' tax</li>
+</ul>
+<hr />
+<p>SALES LIST : <b>{{ salesList | json }}</b></p>
+<hr />
+
+<!-- Working app with custom randomize data -->
+<app-root></app-root>
